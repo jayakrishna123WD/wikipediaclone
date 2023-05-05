@@ -1,0 +1,150 @@
+:root{
+    --linkcolor: rgb(45, 45, 247);
+}
+body{
+    width: 100vw;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+input{
+    border: 1px solid white;
+    background-color: white;
+    width: 500px;
+}
+input:active, input:visited, input:focus{
+    border: none;
+    outline: none;
+    background-color: white;
+}
+button{
+    background-color: white;
+    padding: 5px;
+    border: 1px solid gray;
+}
+.navbar{
+    list-style-type: none;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+#one{
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    align-items: center;
+}
+#two{
+    display: flex;
+    align-items: center;
+    gap: 5em;
+}
+#lo{
+    cursor: pointer;
+    margin-right: 1em;
+}
+.account, .login{
+    color: var(--linkcolor);
+    cursor: pointer;
+}
+.account:hover, .login:hover{
+    display: inline;
+    border-bottom: 1px solid var(--linkcolor);
+}
+#left{
+    width: 25%;
+    position: sticky;
+    top: 0;
+    float: left;
+}
+#right{
+    width: 70%;
+    float: left;
+}
+main::after{
+    content: " ";
+    clear: both;
+    display: block;
+}
+.content{
+    margin-bottom: 11px;
+    text-align: center;
+}
+.lineforcontent{
+    width: 85%;
+}
+.innernav, .innerleft, .innerright{
+    display: flex;
+}
+.innernav{
+    justify-content: space-between;
+}
+.innerleft p, .innerright p{
+    margin: 0 10px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: var(--linkcolor);
+}
+#drop{
+    outline: none;
+    border: none;
+    border-radius: 0;
+}
+/* Responsive design code*/
+@media screen and (min-width: 350px) and (max-width: 768px) {
+    body{
+        width: 100vw;
+        overflow: auto;
+    }
+    input{
+        width: 200px;
+    }
+    .logo{
+        height: 40px;
+        width: 40px;
+    }
+    button{
+        padding: 1px;
+    }
+    .navbar{
+        display: unset;
+    }
+    #two{
+        gap: 2em;
+        margin: 10px 0;
+    }
+    #left, #right{
+        float: none;
+    }
+    #left{
+        display: none;
+    }
+    #right{
+        width: 100%;
+    }
+    .innernav{
+        display: unset;
+    }
+    .innerright{
+        margin-top: 10px;
+    }
+}
+@media screen and (min-width: 400px) and (max-width: 475px){
+    input{
+        width: 250px;
+    }
+}
+@media screen and (min-width: 476px) and (max-width: 575px){
+    input{
+        width: 350px;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 768px){
+    input{
+        width: 450px;
+    }
+}
